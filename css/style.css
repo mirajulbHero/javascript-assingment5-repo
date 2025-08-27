@@ -95,4 +95,97 @@ header ul .money {
     font-weight: 600;
 }
 
+/* card area style */
+.card-items-area {
+    background-color: #F5FFF6;
+}
+.card-area {
+    display: grid;
+    grid-template-columns: auto auto auto;
+   column-gap: 20px;
+}
+.flex-items {
+    display: flex;
+    justify-content:space-between;
+}
+
+.card {
+    max-width: 250px;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    box-shadow: 3px 7px 14px gray;
+    background-color: #fff;
+}
+.card-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-icon-1 img {
+    max-width: 25px;
+    background-color: #FFE3E2;
+    padding: 7px;
+    border-radius: 8px;
+}
+.card-discription {
+    margin-top: 10px;
+}
+.card-discription .title{
+    font-family: hind madurai;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.card-discription .hotline-number{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.card-discription .all-btn {
+    font-size: 10px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    padding: 8px;
+}
+.card-discription .two-btn{
+    margin-top: 15px;
+}
+.copy-btn,
+.call-btn {
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 0;
+    max-width: 50%;
+}
+.copy-btn .fa-clone,
+.call-btn .fa-phone{
+    font-size: 8px;
+    margin-right: 4px;
+}
+.copy-btn:hover {
+    background-color:black;
+    color: white;
+}
+.call-btn{
+   background-color: green;
+   color: white;
+   margin-left: 22px;
+}
+
+/* call history style */
+.call-history-area {
+    border: 2px solid red;
+    width: 300px;
+    background-color: #fff;
+}
+.call-history-area p {
+    display: inline-block;
+    margin-top: 40px;
+}
+.call-history-area  .clear-btn {
+    display: inline-block;
+    margin-left: 250px;
+}
+
 
