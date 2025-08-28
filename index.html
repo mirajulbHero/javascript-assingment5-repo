@@ -19,8 +19,8 @@
                 <h3>Emergency <br> Service</h3>
             </div>
             <ul>
-                <li class="heart-icon">0<span id="hart"><i class="fa fa-heart"></i></span></li>
-                <li class="money">100 <span id="money"><i class="fa fa-credit-card"></i></span></li>
+                <li class="heart-icon"><span id="heartCount">0</span><span id="hart"><i class="fa fa-heart"></i></span></li>
+                <li class="money">100 <span id="money"><img src="images/coin.png" alt=""></i></span></li>
                 <li class="copy-item"><span id="copy">0</span>copy</li>
             </ul>
         </nav>
@@ -43,7 +43,7 @@
                                 <img src="images/emergency.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="nationalLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -65,7 +65,7 @@
                                 <img src="images/police.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="policeLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -87,7 +87,7 @@
                                 <img src="images/fire-service.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="fireLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -109,7 +109,7 @@
                                 <img src="images/ambulance.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="ambulanceLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -131,7 +131,7 @@
                                 <img src="images/emergency.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="womenLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -153,7 +153,7 @@
                                 <img src="images/emergency.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="corruptionLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -175,7 +175,7 @@
                                 <img src="images/emergency.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="electricityLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -197,7 +197,7 @@
                                 <img src="images/emergency.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="bracLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -219,7 +219,7 @@
                                 <img src="images/emergency.png" alt="image">
                             </div>
                             <div class="card-icon-2">
-                                <span><i class="fa fa-heart-o"></i></span>
+                                <span id="railwayLoveButton"><i class="fa fa-heart-o"></i></span>
                             </div>
                         </div>
                         <div class="card-discription">
@@ -237,8 +237,13 @@
                 </div> 
                 <!-- card area -->
                     <div class="call-history-area">
-                        <p>Call History</p>
-                        <button class="clear-btn">Clear</button>
+                        <div class="call-item-left">
+                            <span><i class="fa fa-clock-o"></i>Call History</span>
+                        </div>
+                        <div class="call-item-right">
+                            <button class="clear-btn">Clear</button>
+                        </div>
+                        
                     </div>
             </div>
        
@@ -247,6 +252,6 @@
      </section>
 
     
-    
+    <script src="main.js"></script>
 </body>
 </html>
