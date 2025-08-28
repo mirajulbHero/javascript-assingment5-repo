@@ -180,10 +180,14 @@ header ul .money {
 .call-history-area {
     border: 2px solid red;
     width: 300px;
-    display: flex;
-    justify-content: space-between;
     background-color: #fff;
     margin-top: 25px;
+    box-shadow: 3px 7px 14px gray;
+
+}
+.call-items {
+    display: flex;
+    justify-content: space-between;
 }
 .call-item-left {
     margin-top: 20px;
@@ -203,6 +207,35 @@ header ul .money {
     border-radius: 20px;
     border: 0;
     color: #fff;
+}
+.call-description {
+    margin-top: 20px;
+    padding: 0 10px;
+}
+.call-area {
+     display: flex;
+    justify-content: space-between;
+    background-color: #EEF5FA;
+    padding: 10px 10px;
+    border-radius: 7px;
+}
+.call-area .call-left p {
+    font-family: intel;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.call-area .call-left span,
+.call-area .call-right p {
+    font-family: hind madurai;
+    font-size: 18px;
+    font-weight: 400;
+    color: #5C5C5C;
+    border
+}
+.call-area .call-right p {
+    margin-top: 15px;
+    font-size: 18px
 }
 
 

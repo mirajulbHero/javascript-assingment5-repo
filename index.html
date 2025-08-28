@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="css/style.css">
     
@@ -20,7 +20,7 @@
             </div>
             <ul>
                 <li class="heart-icon"><span id="heartCount">0</span><span id="hart"><i class="fa fa-heart"></i></span></li>
-                <li class="money">100 <span id="money"><img src="images/coin.png" alt=""></i></span></li>
+                <li class="money"> <span id="taka">100</span><span id="money"><img src="images/coin.png" alt=""></i></span></li>
                 <li class="copy-item"><span id="copy">0</span>copy</li>
             </ul>
         </nav>
@@ -53,7 +53,7 @@
                                 <small class="all-btn">All</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button onclick="nationAlertMeassage()" id="nationCallBtn" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -75,7 +75,7 @@
                                 <small class="all-btn">Police</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="policeCallBtn" onclick="policeAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -97,7 +97,7 @@
                                 <small class="all-btn">Fire</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="fireCallBtn" onclick="fireAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -119,7 +119,7 @@
                                 <small class="all-btn">Health</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="ambulanceCallBtn" onclick="ambulanceAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -141,7 +141,7 @@
                                 <small class="all-btn">Help</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="womenCallBtn" onclick="womenAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -163,7 +163,7 @@
                                 <small class="all-btn">Govt</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="corruptionCallBtn" onclick="CorruptionAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -185,7 +185,7 @@
                                 <small class="all-btn">Electricity</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="electricityCallBtn" onclick="electricityAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -207,7 +207,7 @@
                                 <small class="all-btn">NGO</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="bracCallBtn" onclick="bracAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -229,7 +229,7 @@
                                 <small class="all-btn">Travel</small>
                                 <div class="two-btn">
                                     <button class="copy-btn"><i class="fa fa-clone"></i>copy</button>
-                                    <button class="call-btn"><i class="fa fa-phone"></i>call</button>
+                                    <button id="railwayCallBtn" onclick="railwayAlertMeassage()" class="call-btn"><i class="fa fa-phone"></i>call</button>
                                 </div>
 
                         </div>
@@ -237,11 +237,113 @@
                 </div> 
                 <!-- card area -->
                     <div class="call-history-area">
-                        <div class="call-item-left">
-                            <span><i class="fa fa-clock-o"></i>Call History</span>
+                            <div class="call-items">
+                                <div class="call-item-left">
+                                <span><i class="fa fa-clock-o"></i>Call History</span>
+                            </div>
+                            <div class="call-item-right">
+                                <button class="clear-btn">Clear</button>
+                            </div>
                         </div>
-                        <div class="call-item-right">
-                            <button class="clear-btn">Clear</button>
+                        
+                        <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>National Emergency <br> Number</p>
+                                    <span>999</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="nationClock"></p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Police Service Number</p>
+                                    <span>999</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="policeClock">clock</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Fire Service Number</p>
+                                    <span>999</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="fireClock">clock</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Ambulance Service</p>
+                                    <span>1994-999999</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="ambulanceClock">clock</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Women & Child <br> Helpline</p>
+                                    <span>109</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="womenClock">clock</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Anti-Corruption <br>Helpline</p>
+                                    <span>106</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="corruptionClock">clock</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Electricity Helpline</p>
+                                    <span>16216</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="electricityClock">clock</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Brac Helpline</p>
+                                    <span>16445</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="bracClock">clock</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="call-description">
+                            <div class="call-area">
+                                <div class="call-left">
+                                    <p>Bangladesh Railway <br> Helpline </p>
+                                    <span>163</span>
+                                </div>
+                                <div class="call-right">
+                                    <p id="railwayClock">clock</p>
+                                </div>
+                            </div>
                         </div>
                         
                     </div>
