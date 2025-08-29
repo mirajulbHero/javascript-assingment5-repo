@@ -77,20 +77,58 @@ makeCall ('bracCallBtn')
 makeCall ('railwayCallBtn')
 
 
-// show time function
-function showTime(id){
-    let time = new Date();
-    document.getElementById(id).innerText =time.toLocaleTimeString();
+// // show time function
+// function showTime(id){
+//     let time = new Date();
+//     document.getElementById(id).innerText =time.toLocaleTimeString();
+// }
+// showTime('nationClock');
+// showTime('policeClock');
+// showTime('fireClock');
+// showTime('ambulanceClock');
+// showTime('womenClock');
+// showTime('corruptionClock');
+// showTime('electricityClock');
+// showTime('bracClock');
+// showTime('railwayClock');
+
+// call history item show area
+function getElement (id){
+    const element = document.getElementById(id);
+    return element
 }
-showTime('nationClock');
-showTime('policeClock');
-showTime('fireClock');
-showTime('ambulanceClock');
-showTime('womenClock');
-showTime('corruptionClock');
-showTime('electricityClock');
-showTime('bracClock');
-showTime('railwayClock');
+
+const cartButtons = document.getElementsByClassName ('cartbtn');
+
+for(const cartButton of cartButtons){
+    cartButton.addEventListener('click', function(){
+        const cardTitle = cartButton.parentNode.parentNode.children[0].innerText;
+        const cardNumber = cartButton.parentNode.parentNode.children[2].innerText;
+        let time = new Date();
+        let nowTime = document.getElementById('Clock').innerText = time.toLocaleTimeString();
+
+        const clockContainer = getElement('callDesAll');
+        console.log(clockContainer)
+        const newClockitem = document.createElement('div');
+        newClockitem.innerHTML = `
+            <div class="call-description">
+                <div  id="callItemOne"  class="call-area">
+                    <div class="call-left">
+                        <p>${cardTitle}</p>
+                        <span>${cardNumber}</span>
+                    </div>
+                    <div class="call-right">
+                        <p id="Clock">${nowTime}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        const hide = document.getElementById('hide');
+        hide.style.display = 'none';
+        clockContainer.append(newClockitem);
+        console.log(clockContainer);
+    })
+}
 
 
 
