@@ -142,7 +142,11 @@ document.getElementById('clearBtn').addEventListener('click',function(){
 const copyButtons = document.getElementsByClassName('copy-btn');
 for(const copyButton of copyButtons){
     copyButton.addEventListener('click', function(){
-        alert("This Number is copy 999")
+        const copyCount = document.getElementById('copyCount');
+        const copyCountValue = parseInt(copyCount.innerText);
+        const newCopyCountValue = copyCountValue + 1;
+        copyCount.innerText = newCopyCountValue;
+
         console.log('copybtn clidk')
     })
 }
