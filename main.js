@@ -142,12 +142,14 @@ document.getElementById('clearBtn').addEventListener('click',function(){
 const copyButtons = document.getElementsByClassName('copy-btn');
 for(const copyButton of copyButtons){
     copyButton.addEventListener('click', function(){
+        const cardNumber = copyButton.parentNode.parentNode.children[2].innerText;
+        navigator.clipboard.writeText(cardNumber);
+        alert("Copied Number: " + cardNumber);
         const copyCount = document.getElementById('copyCount');
         const copyCountValue = parseInt(copyCount.innerText);
         const newCopyCountValue = copyCountValue + 1;
         copyCount.innerText = newCopyCountValue;
 
-        console.log('copybtn clidk')
     })
 }
 
