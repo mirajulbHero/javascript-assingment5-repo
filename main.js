@@ -123,12 +123,19 @@ for(const cartButton of cartButtons){
                 </div>
             </div>
         `;
-        const hide = document.getElementById('hide');
-        hide.style.display = 'none';
         clockContainer.append(newClockitem);
-        console.log(clockContainer);
+
     })
 }
+
+// delete all feature
+
+document.getElementById('clearBtn').addEventListener('click',function(){
+    const clockContainer = getElement('callDesAll');
+    clockContainer.innerHTML = '';
+    console.log('clear btn click')
+})
+
 
 
 
