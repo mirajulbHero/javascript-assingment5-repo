@@ -94,7 +94,7 @@ header ul .money {
 }
 .banner p {
     font-family: hind madurai;
-    font-style: 20px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -184,7 +184,6 @@ header ul .money {
 
 /* call history style */
 .call-history-area {
-    border: 2px solid red;
     width: 300px;
     background-color: #fff;
     margin-top: 25px;

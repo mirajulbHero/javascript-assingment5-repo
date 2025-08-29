@@ -108,7 +108,6 @@ for(const cartButton of cartButtons){
         let nowTime = document.getElementById('Clock').innerText = time.toLocaleTimeString();
 
         const clockContainer = getElement('callDesAll');
-        console.log(clockContainer)
         const newClockitem = document.createElement('div');
         newClockitem.innerHTML = `
             <div class="call-description">
@@ -124,7 +123,10 @@ for(const cartButton of cartButtons){
             </div>
         `;
         clockContainer.append(newClockitem);
-
+        let takaCount = document.getElementById('taka');
+        if (takaCount<= 0) {
+            newClockitem.innerHTML = '';
+        }
     })
 }
 
@@ -135,6 +137,16 @@ document.getElementById('clearBtn').addEventListener('click',function(){
     clockContainer.innerHTML = '';
     console.log('clear btn click')
 })
+
+// copy but function feature
+const copyButtons = document.getElementsByClassName('copy-btn');
+for(const copyButton of copyButtons){
+    copyButton.addEventListener('click', function(){
+        alert("This Number is copy 999")
+        console.log('copybtn clidk')
+    })
+}
+
 
 
 
